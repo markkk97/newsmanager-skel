@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- https://www.creative-tim.com/ -->
+<!-- https://www.creative-tim.com/product/material-dashboard-pro/?affiliate_id=101249 -->
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>EIT Digital Newspaper</title>
+
+
+	<!-- Uncomment the Bootstrap version you are going to use -->
+	<!-- Bootsratp 3.3 -->
+	<!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> -->
+	<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script> -->
+	<!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> -->
+	
+	<!-- Bootsratp 4.0 -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">  
+	<link rel="stylesheet" href="css/app.css">
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+	<script src="https://kit.fontawesome.com/a076d05399.js"></script>
+  
+
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.8/angular.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.8/angular-route.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.8/angular-resource.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.8/angular-sanitize.js"></script>
+
+</head>
+
+<body ng-app="newssapp" >
+	
+	
+	<nav class="navbar navbar-expand-lg navbar-dark bg-dark ">
+		<a class="navbar-brand" href="#">
+		  <img src="https://www.upm.es/sfs/Rectorado/Gabinete%20del%20Rector/Logos/UPM/Logotipo/LOGOTIPO%20color%20JPG%20p.png" width="30" height="30" class="d-inline-block align-top" alt="">
+		  Bootstrap
+		</a>
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		  </button>
+		  <div class="collapse navbar-collapse" id="navbarNavDropdown">
+			<ul class="navbar-nav ml-auto">
+			  <li class="nav-item dropdown">
+				<a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+				  Categories
+				</a>
+				<div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+				  <a class="dropdown-item" href="#">Action</a>
+				  <a class="dropdown-item" href="#">Another action</a>
+				  <a class="dropdown-item" href="#">Something else here</a>
+				</div>
+			  </li>
+			  <li class="nav-item ">
+				<a class="btn btn-primary" href="#">Login</a>
+			  </li>
+			</ul>
+		  </div>
+
+
+
+	  </nav>
+
+	<div  class="container">
+		<div class="row">
+			<div class="col-lg-12">
+					<img src="img/eitd.png"  class="img-thumbnail eit rounded mx-auto d-block" alt="eit logo">
+			</div>
+			
+		</div>
+
+	
+	</div>
+	<!-- ngview -->
+	<div ng-view class="container">
+
+				
+		
+	</div>
+
+
+	
+
+	<!-- AngularJS App Code ==================================================== -->
+	<script src="news/news-app.js"></script>
+	<script src="news/news-services.js"></script>
+	<script src="news/news-controllers.js"></script>
+
+	<!-- TODO: Add a footer here -->
+
+</body>
+
+
+</html>
