@@ -8,7 +8,7 @@ var app = angular.module("newssapp", ["ngRoute", "ngResource","ngSanitize"]);
 // $http.defaults.headers.common['Authorization'] = loginres.Authorization + ' apikey=' + loginres.apikey;
 
 app.run(['$http', function ($http) {
-	$http.defaults.headers.common['Authorization'] = 'PUIRESTAUTH apikey=XXXXXXXXAPIKEY';
+	$http.defaults.headers.common['Authorization'] = 'PUIRESTAUTH apikey=DEV_TEAM_48392';
 }]);
 
 /**************************************************************************/

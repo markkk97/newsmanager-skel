@@ -3,36 +3,43 @@
 *************************************************************************************************/
 var app = angular.module('newssapp');
 //ROUTING
-app.config(function ($routeProvider) { $routeProvider
-
-    .when("/page1", {
+app.config(function ($routeProvider) { 
+    
+    $routeProvider.when("/page1", {
         templateUrl: "page1.template.html", controller: "page1Ctrl"
-    }).when("/page2", {
-        templateUrl: "page2.template.html",
+    }).when("news/news-login.html", {
+        templateUrl: "news/news-login.html",
         controller: "page2Ctrl" })
 
     .otherwise({
         templateUrl: "news/news-list.html", controller: "newsListController"
     }); 
+
+   
 });
 
 
 
+app.controller('newsListController', function($rootScope,$scope,NewsListService) {
+    
+    $rootScope.userLogged = false;
+    $rootScope.categories = ["National", "International", "Economy","Sports"];
 
-app.controller('newsListController', function($scope,LoginService) {
+    console.log($rootScope.userLogged);
+    
+
+    $scope.getArticleList = () => {
+        NewsListService.query({}, (data) =>{
+            console.log("newslistcontroller"); 
+            console.log(data)
+            $scope.articleList= data;
+        }, (error) =>{
+        console.log(error);
+        
+    })
+    }
+
+    $scope.getArticleList();
   
-
-
-    console.log("newsreder controller");
-  LoginService.query(params,function (data) {
-    console.log("okay");
-    
-    },
-    function (error) {
-    // Response KO and info about the response in ‘error’ }
-    console.log("error");
-    
-
-    });
 
 });
